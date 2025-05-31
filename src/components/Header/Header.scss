@@ -1,0 +1,29 @@
+@use "../../index.scss" as *;
+
+header {
+    background-color: $c_black;
+    padding: 24px 0;
+
+    .header_list {
+        color: $c_white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Josefin Sans", sans-serif;
+        @include font-config(header);
+
+        li {
+            flex-grow: 1;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+
+        li + li {
+            border-left: 2px solid $c_white;
+        }
+    }
+}
