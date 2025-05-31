@@ -1,0 +1,12 @@
+@use "../../index.scss" as *;
+
+hgroup {
+    p {
+        @include font-config(headingSmall);
+    }
+
+    h2 {
+        @include font-config(headingPC);
+        margin-top: 16px;
+    }
+}

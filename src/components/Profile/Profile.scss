@@ -1,0 +1,29 @@
+@use "../../index.scss" as *;
+
+.profile_texts {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.profile_desc_list {
+    margin-top: 80px;
+    display: flex;
+    gap: 64px;
+    position: relative;
+
+    dt {
+        @include font-config(body);
+        font-size: rem(48);
+    }
+    dd {
+        @include font-config(body);
+        font-size: rem(24);
+    }
+    .img {
+        position: absolute;
+        right: 0;
+        top: -200px;
+        z-index: -1;
+    }
+}
