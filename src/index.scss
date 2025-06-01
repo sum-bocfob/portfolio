@@ -3,6 +3,9 @@
 
 $c_white: #fff;
 $c_black: #262626;
+$c_meter_main: #528de6;
+$c_meter_frame: #eeeeee;
+$c_meter_bg: #686868;
 
 @function rem($px) {
     @return calc($px / 16) * 1rem;
@@ -30,7 +33,7 @@ $font-presets: (
     headingSmall: (
         font-family: "Sawarabi Gothic,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans, Meiryo, sans-serif",
         font-size: rem(24),
-        font-weight: bold,
+        font-weight: normal,
         line-height: 1,
     ),
     body: (
@@ -55,4 +58,8 @@ $font-presets: (
 
 .upperCase {
     text-transform: uppercase;
+}
+
+body {
+    @include font-config(body);
 }

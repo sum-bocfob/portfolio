@@ -1,6 +1,4 @@
-import "./Heading.scss";
-
-import React from "react";
+import st from "./Heading.module.scss";
 
 type Prop = {
     jaText: string;
@@ -9,7 +7,7 @@ type Prop = {
 
 const Heading = ({ jaText, enText }: Prop) => {
     return (
-        <hgroup>
+        <hgroup className={st.heading}>
             <p>{jaText}</p>
             <h2 className="upperCase">{enText}</h2>
         </hgroup>

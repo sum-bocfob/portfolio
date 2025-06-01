@@ -1,16 +1,18 @@
 import Container from "../Container";
 import Heading from "../Heading";
 import Section from "../Section";
-import "./Profile.scss";
+import st from "./Profile.module.scss";
+
+import img from "../../assets/Rectangle.jpg";
 
 const Profile = () => {
     return (
-        <Container>
-            <Section>
+        <Section bgBlack={false}>
+            <Container>
                 <Heading jaText="プロフィール" enText="Profile" />
 
-                <div className="profile_texts">
-                    <dl className="profile_desc_list">
+                <div className={st.profile_texts}>
+                    <dl className={st.profile_desc_list}>
                         <dt>久野 拓也</dt>
                         <div>
                             <dd aria-hidden="true">TAKUYA HISANO</dd>
@@ -18,8 +20,8 @@ const Profile = () => {
                                 <time dateTime="1993-11-08">1993/11/08</time>
                             </dd>
                         </div>
-                        <dd className="img">
-                            <img src="Rectangle.jpg" alt="3DCGソフトBlenderで作成した私のアバター" width={420} height={300} />
+                        <dd className={st.img}>
+                            <img src={img} alt="3DCGソフトBlenderで作成した私のアバター" width={420} height={300} />
                         </dd>
                     </dl>
                     <p>
@@ -30,8 +32,8 @@ const Profile = () => {
                         趣味は3DCG制作。
                     </p>
                 </div>
-            </Section>
-        </Container>
+            </Container>
+        </Section>
     );
 };
 

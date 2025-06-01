@@ -1,13 +1,13 @@
 import React from "react";
 import Container from "../Container";
-import "./Header.scss";
+import st from "./Header.module.scss";
 
 const Header = () => {
     return (
         <header>
             <nav>
                 <Container>
-                    <ul className="header_list">
+                    <ul className={st.header_list}>
                         <li>
                             <a href="#profile" className="upperCase">
                                 Profile

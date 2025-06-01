@@ -1,6 +1,6 @@
 @use "../../index.scss" as *;
 
-hgroup {
+.heading {
     p {
         @include font-config(headingSmall);
     }

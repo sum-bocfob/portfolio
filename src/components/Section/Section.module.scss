@@ -1,0 +1,14 @@
+@use "../../index.scss" as *;
+
+.section {
+    padding: 64px 0;
+}
+
+.black {
+    background: $c_black;
+    color: $c_white;
+}
+.white {
+    background: $c_white;
+    color: $c_black;
+}
