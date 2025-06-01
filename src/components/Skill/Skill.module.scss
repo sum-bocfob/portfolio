@@ -47,14 +47,10 @@
 
     &_gauge {
         background-color: $c_meter_main;
-        width: 100%;
+        width: 0;
         height: 100%;
-        &__1 {
-            width: 40px;
-        }
-        &__2 {
-            width: 80px;
-        }
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
 
         &::before,
         &::after {
@@ -74,4 +70,14 @@
             left: 78px;
         }
     }
+}
+
+.meter_gauge__1 {
+    width: 40px;
+}
+.meter_gauge__2 {
+    width: 80px;
+}
+.meter_gauge__3 {
+    width: 100%;
 }
