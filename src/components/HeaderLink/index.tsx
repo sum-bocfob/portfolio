@@ -39,7 +39,7 @@ const HeaderLink = ({ name }: { name: string }) => {
 
     return (
         <li>
-            <a ref={linkRef} href="#profile" onMouseEnter={handleMouseEnter} className="upperCase">
+            <a ref={linkRef} href={`#${name.toLowerCase()}`} onMouseEnter={handleMouseEnter} className="upperCase">
                 {name}
             </a>
         </li>

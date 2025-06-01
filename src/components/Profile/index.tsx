@@ -7,7 +7,7 @@ import img from "../../assets/Rectangle.jpg";
 
 const Profile = () => {
     return (
-        <Section bgBlack={false}>
+        <Section id="profile" bgBlack={false}>
             <Container>
                 <Heading jaText="プロフィール" enText="Profile" />
 

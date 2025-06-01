@@ -6,7 +6,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className={st.footer}>
+        <footer id="contact" className={st.footer}>
             <Container>
                 <Heading jaText="お問い合わせ" enText="Contact" />
                 <p className={st.text}>下記メールアドレスにてお問い合わせください。</p>

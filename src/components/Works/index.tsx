@@ -8,7 +8,7 @@ import works from "../../works";
 
 const Works = () => {
     return (
-        <Section bgBlack={false}>
+        <Section id="works" bgBlack={false}>
             <Container>
                 <Heading jaText="制作物" enText="Works" />
                 <Grid colNum={3}>
