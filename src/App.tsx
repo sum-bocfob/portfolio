@@ -1,4 +1,5 @@
 import "./App.scss";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Profile from "./components/Profile";
 import Skills from "./components/Skills";
@@ -11,6 +12,7 @@ function App() {
             <Profile />
             <Skills />
             <Works />
+            <Footer />
         </>
     );
 }

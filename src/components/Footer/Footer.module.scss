@@ -1,0 +1,18 @@
+@use "../../index.scss" as *;
+
+.footer {
+    background-color: $c_black;
+    color: $c_white;
+    padding: 64px 0;
+
+    .text {
+        margin-top: 56px;
+    }
+
+    .address {
+        display: block;
+        margin-top: 32px;
+        text-decoration: underline;
+        @include font-config(headingSmall);
+    }
+}
