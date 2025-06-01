@@ -1,6 +1,14 @@
 import React from "react";
 import Container from "../Container";
 import st from "./Header.module.scss";
+import { gsap } from "gsap";
+
+import { SplitText } from "gsap/SplitText";
+import HeaderLink from "../HeaderLink";
+
+gsap.registerPlugin(SplitText);
+
+const headerTexts: string[] = ["Profile", "Skills", "Works", "Contact"];
 
 const Header = () => {
     return (
@@ -8,26 +16,9 @@ const Header = () => {
             <nav>
                 <Container>
                     <ul className={st.header_list}>
-                        <li>
-                            <a href="#profile" className="upperCase">
-                                Profile
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#skills" className="upperCase">
-                                Skills
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#works" className="upperCase">
-                                Works
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" className="upperCase">
-                                Contact
-                            </a>
-                        </li>
+                        {headerTexts.map((text) => (
+                            <HeaderLink key={text} name={text} />
+                        ))}
                     </ul>
                 </Container>
             </nav>
