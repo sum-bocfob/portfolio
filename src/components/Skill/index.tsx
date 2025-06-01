@@ -15,7 +15,7 @@ const Skill = ({ name, desc, level, img }: SkillType) => {
 
         ScrollTrigger.create({
             trigger: elm,
-            start: "top 80%",
+            start: "top 90%",
             onEnter: () => elm.classList.add(st["meter_gauge__" + level]),
             once: true,
         });
