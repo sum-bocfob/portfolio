@@ -14,7 +14,7 @@ const Skills = () => {
                 <Heading jaText="できること" enText="Skills" />
                 <Grid colNum={2}>
                     {skills.map((skill) => (
-                        <Skill {...skill} />
+                        <Skill key={skill.name} {...skill} />
                     ))}
                 </Grid>
             </Container>

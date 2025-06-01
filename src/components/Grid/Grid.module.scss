@@ -1,5 +1,6 @@
 .grid {
     margin-top: 56px;
+    // justify-content: space-between;
 }
 
 .grid2 {
@@ -12,4 +13,5 @@
 .grid3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 64px;
 }
