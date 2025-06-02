@@ -1,0 +1,20 @@
+@use "../../index.scss" as *;
+
+.heading {
+    @include font-config(headingSmall);
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+    li {
+        padding: 0 16px;
+
+        & + li {
+            border-left: 1px solid $c_white;
+        }
+    }
+}
