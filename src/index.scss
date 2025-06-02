@@ -6,6 +6,7 @@ $c_black: #262626;
 $c_meter_main: #528de6;
 $c_meter_frame: #eeeeee;
 $c_meter_bg: #686868;
+$header_height: 80px;
 
 @function rem($px) {
     @return calc($px / 16) * 1rem;

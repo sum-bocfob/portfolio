@@ -2,6 +2,11 @@
 
 .section {
     padding: 64px 0;
+
+    // ヘッダーとの重なり回避
+    &:first-of-type {
+        padding-top: $header_height + 64px;
+    }
 }
 
 .black {

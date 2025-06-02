@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-gsap.registerPlugin(SplitText);
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(SplitText, ScrollToPlugin);
 
 const HeaderLink = ({ name }: { name: string }) => {
     // a要素
@@ -37,9 +38,14 @@ const HeaderLink = ({ name }: { name: string }) => {
         );
     };
 
+    const handleClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        gsap.to(window, { duration: 0.25, ease: "power2.out", scrollTo: { y: `#${name.toLowerCase()}`, offsetY: 80 } });
+    };
+
     return (
         <li>
-            <a ref={linkRef} href={`#${name.toLowerCase()}`} onMouseEnter={handleMouseEnter} className="upperCase">
+            <a ref={linkRef} href={`#${name.toLowerCase()}`} onMouseEnter={handleMouseEnter} onClick={(e) => handleClick(e)} className="upperCase">
                 {name}
             </a>
         </li>
