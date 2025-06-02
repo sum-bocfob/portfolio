@@ -14,71 +14,81 @@ export type WorkType = {
     pageUrl: string;
     siteUrl: string;
     fromComp: boolean;
+    type: string;
 };
 
 const works: WorkType[] = [
     {
         name: "一葉庵",
         img: img_ichiyoan,
-        pageUrl: "/",
+        pageUrl: "/work_detail/ichiyoan",
         siteUrl: "https://sum-bocfob.github.io/ichiyoan/",
         fromComp: false,
+        type: "Webサイト",
     },
     {
         name: "Lumo Creatives",
         img: img_lumo,
-        pageUrl: "/",
+        pageUrl: "/work_detail/lumo_creatives",
         siteUrl: "https://sum-bocfob.github.io/Lumo_Creatives/",
         fromComp: false,
+        type: "Webサイト",
     },
     {
         name: "Mellow Sound Studio",
         img: img_mellow,
-        pageUrl: "/",
+        pageUrl: "/work_detail/mellow_sound_studio",
         siteUrl: "https://sum-bocfob.github.io/Mellow_Sound_Studio/index.html",
         fromComp: false,
+        type: "Webサイト",
     },
     {
         name: "Café Lumière",
         img: img_cafe,
-        pageUrl: "/",
+        pageUrl: "/work_detail/cafe_lumiere",
         siteUrl: "https://sum-bocfob.github.io/Cafe_Lumiere/",
         fromComp: false,
+        type: "Webサイト",
     },
     {
         name: "FA EXHIBITION",
         img: img_fa,
-        pageUrl: "/",
+        pageUrl: "/work_detail/fa_exhibition",
         siteUrl: "https://sum-bocfob.github.io/gallery/",
         fromComp: true,
+        type: "Webサイト",
     },
     {
         name: "BBB英会話スクール",
         img: img_bbb,
-        pageUrl: "/",
+        pageUrl: "/work_detail/bbb_english_school",
         siteUrl: "https://sum-bocfob.github.io/bbb_lp/",
         fromComp: true,
+        type: "Webサイト",
     },
     {
         name: "Sneakers",
         img: img_sneakers,
-        pageUrl: "/",
+        pageUrl: "/work_detail/sneakers",
         siteUrl: "https://sum-bocfob.github.io/media/",
         fromComp: true,
+        type: "Webサイト",
     },
     {
         name: "Planet Hunters",
         img: img_planet,
-        pageUrl: "/",
+        pageUrl: "/work_detail/planet_hunters",
         siteUrl: "https://sum-bocfob.github.io/planet_hunter/",
         fromComp: true,
+        type: "Webサイト",
     },
     {
         name: "ENGBODY",
         img: img_engbody,
-        pageUrl: "/",
+        pageUrl: "/work_detail/engbody",
         siteUrl: "https://sum-bocfob.github.io/engbody/",
         fromComp: true,
+        type: "Webサイト",
     },
 ];
 

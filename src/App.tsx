@@ -1,19 +1,17 @@
-import "./App.scss";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Profile from "./components/Profile";
-import Skills from "./components/Skills";
-import Works from "./components/Works";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import WorkDetail from "./pages/WorkDetail";
+// import Works from "./pages/Works";
 
 function App() {
     return (
-        <>
-            <Header />
-            <Profile />
-            <Skills />
-            <Works />
-            <Footer />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                {/* <Route path="/works" element={<Works />} /> */}
+                <Route path="/work_detail/:id" element={<WorkDetail />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
