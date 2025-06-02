@@ -16,6 +16,8 @@ export type WorkType = {
     fromComp: boolean;
     type: string;
     usedSkills: string[];
+    duration_day: number;
+    duration_hour: number;
     descJSX: React.ReactNode;
 };
 
@@ -28,6 +30,8 @@ const works: WorkType[] = [
         fromComp: false,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
+        duration_day: 4,
+        duration_hour: 27,
         descJSX: (
             <>
                 <h3>依頼内容(一部抜粋)</h3>
@@ -62,7 +66,27 @@ const works: WorkType[] = [
         fromComp: false,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        descJSX: <div></div>,
+        duration_day: 6,
+        duration_hour: 26,
+        descJSX: (
+            <>
+                <h3>依頼内容(一部抜粋)</h3>
+                <h4>目的</h4>
+                <ul>
+                    <li>映像制作・写真撮影・デザインの受注を目的としたブランディングサイト</li>
+                    <li>作品紹介、サービス内容、料金プラン、問い合わせフォームの掲載</li>
+                    <li>シンプルだけど個性的なデザインが希望</li>
+                </ul>
+                <h4>必須セクション</h4>
+                <ul>
+                    <li>トップヒーロー（動画orキャッチコピー）</li>
+                    <li>About（自己紹介＋コンセプト）</li>
+                    <li>Works（実績紹介ギャラリー）</li>
+                    <li>Services（提供サービス＋料金）</li>
+                    <li>Contact（問い合わせフォーム）</li>
+                </ul>
+            </>
+        ),
     },
     {
         name: "Mellow Sound Studio",
@@ -72,7 +96,29 @@ const works: WorkType[] = [
         fromComp: false,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        descJSX: <div></div>,
+        duration_day: 5,
+        duration_hour: 26,
+        descJSX: (
+            <>
+                <h3>依頼内容(一部抜粋)</h3>
+                <h4>目的</h4>
+                <ul>
+                    <li>音楽練習スタジオの紹介と予約受付</li>
+                    <li>スタジオ設備の紹介（機材など）</li>
+                    <li>料金プランの掲載</li>
+                    <li>初心者〜プロまで幅広い顧客に安心感を与える</li>
+                    <li>Webから予約できる仕組み（問い合わせ可でもOK）</li>
+                </ul>
+                <h4>必須セクション</h4>
+                <ul>
+                    <li>トップページ（印象的なキャッチコピー＋ビジュアル）</li>
+                    <li>スタジオ紹介（部屋写真、機材リストなど）</li>
+                    <li>料金プラン（時間貸し・パック料金）</li>
+                    <li>アクセス（地図、営業時間など）</li>
+                    <li>予約フォーム（名前、電話番号、メール、利用希望日時、スタジオ選択）</li>
+                </ul>
+            </>
+        ),
     },
     {
         name: "Café Lumière",
@@ -82,7 +128,27 @@ const works: WorkType[] = [
         fromComp: false,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        descJSX: <div></div>,
+        duration_day: 5,
+        duration_hour: 25,
+        descJSX: (
+            <>
+                <h3>依頼内容(一部抜粋)</h3>
+                <h4>目的</h4>
+                <ul>
+                    <li>メニューや店舗情報の掲載</li>
+                    <li>予約受付</li>
+                    <li>SNSリンクの表示</li>
+                </ul>
+                <h4>必要なページ</h4>
+                <ul>
+                    <li>ホーム</li>
+                    <li>メニュー（写真付き）</li>
+                    <li>店舗情報・アクセス</li>
+                    <li>予約フォーム</li>
+                    <li>お知らせ・ブログ（スタッフのおすすめや新メニュー紹介）</li>
+                </ul>
+            </>
+        ),
     },
     {
         name: "FA EXHIBITION",
@@ -92,6 +158,8 @@ const works: WorkType[] = [
         fromComp: true,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
+        duration_day: 4,
+        duration_hour: 27,
         descJSX: <div></div>,
     },
     {
@@ -102,6 +170,8 @@ const works: WorkType[] = [
         fromComp: true,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
+        duration_day: 4,
+        duration_hour: 27,
         descJSX: <div></div>,
     },
     {
@@ -112,6 +182,8 @@ const works: WorkType[] = [
         fromComp: true,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
+        duration_day: 4,
+        duration_hour: 27,
         descJSX: <div></div>,
     },
     {
@@ -122,6 +194,8 @@ const works: WorkType[] = [
         fromComp: true,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
+        duration_day: 4,
+        duration_hour: 27,
         descJSX: <div></div>,
     },
     {
@@ -132,6 +206,8 @@ const works: WorkType[] = [
         fromComp: true,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
+        duration_day: 4,
+        duration_hour: 27,
         descJSX: <div></div>,
     },
 ];
