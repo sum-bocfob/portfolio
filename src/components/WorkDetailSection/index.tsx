@@ -11,10 +11,8 @@ const WorkDetailSection = (props: { work: WorkType }) => {
         <Section bgBlack={false} id="">
             <Container>
                 <Heading jaText={type} enText={name} />
-                <div className={st.duration}>
-                    制作期間: <time dateTime={`${duration_day}d`}>{duration_day}日間</time>
-                </div>
-                <p className={st.subText}>{fromComp ? "" : "chatGPTに架空のクライアントになってもらい、その依頼に対応する形で作成しました。"}</p>
+                <div className={st.duration}>制作期間: {duration_day ? <time dateTime={`${duration_day}d`}>{duration_day}日間</time> : "未計測"}</div>
+                <p className={st.subText}>{fromComp ? "無料で公開していただいているデザインカンプを元に作成させていただきました。" : "chatGPTに架空のクライアントになってもらい、その依頼に対応する形で作成しました。"}</p>
                 <div className={st.contents}>
                     <div className={st.imgAndLink}>
                         <img className={st.img} src={img} alt="" />
@@ -22,7 +20,7 @@ const WorkDetailSection = (props: { work: WorkType }) => {
                             {siteUrl}
                         </a>
                     </div>
-                    <div className={st.desc}>{fromComp ? "" : descJSX}</div>
+                    <div className={st.desc}>{descJSX}</div>
                 </div>
             </Container>
         </Section>

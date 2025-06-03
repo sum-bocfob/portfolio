@@ -157,10 +157,23 @@ const works: WorkType[] = [
         siteUrl: "https://sum-bocfob.github.io/gallery/",
         fromComp: true,
         type: "Webサイト",
-        usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        duration_day: 4,
-        duration_hour: 27,
-        descJSX: <div></div>,
+        usedSkills: ["JQuery", "BEM"],
+        duration_day: 0,
+        duration_hour: 0,
+        descJSX: (
+            <>
+                <h3>
+                    <a href="https://code-jump.com/" target="_blank">
+                        Codejump様
+                    </a>
+                    の
+                    <a href="https://code-jump.com/gallery-menu/" target="_blank">
+                        ギャラリーサイト
+                    </a>
+                    にて公開してされているコーディング仕様、デザインカンプを元に作成させていただきました。
+                </h3>
+            </>
+        ),
     },
     {
         name: "BBB英会話スクール",
@@ -169,10 +182,23 @@ const works: WorkType[] = [
         siteUrl: "https://sum-bocfob.github.io/bbb_lp/",
         fromComp: true,
         type: "Webサイト",
-        usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        duration_day: 4,
-        duration_hour: 27,
-        descJSX: <div></div>,
+        usedSkills: ["JQuery", "InView", "BEM"],
+        duration_day: 0,
+        duration_hour: 0,
+        descJSX: (
+            <>
+                <h3>
+                    <a href="https://code-jump.com/" target="_blank">
+                        Codejump様
+                    </a>
+                    の
+                    <a href="https://code-jump.com/lp-menu/" target="_blank">
+                        ランディングページ
+                    </a>
+                    にて公開してされているコーディング仕様、デザインカンプを元に作成させていただきました。
+                </h3>
+            </>
+        ),
     },
     {
         name: "Sneakers",
@@ -182,9 +208,22 @@ const works: WorkType[] = [
         fromComp: true,
         type: "Webサイト",
         usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        duration_day: 4,
-        duration_hour: 27,
-        descJSX: <div></div>,
+        duration_day: 0,
+        duration_hour: 0,
+        descJSX: (
+            <>
+                <h3>
+                    <a href="https://code-jump.com/" target="_blank">
+                        Codejump様
+                    </a>
+                    の
+                    <a href="https://code-jump.com/media-menu/" target="_blank">
+                        メディアサイト
+                    </a>
+                    にて公開してされているコーディング仕様、デザインカンプを元に作成させていただきました。
+                </h3>
+            </>
+        ),
     },
     {
         name: "Planet Hunters",
@@ -193,10 +232,23 @@ const works: WorkType[] = [
         siteUrl: "https://sum-bocfob.github.io/planet_hunter/",
         fromComp: true,
         type: "Webサイト",
-        usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        duration_day: 4,
-        duration_hour: 27,
-        descJSX: <div></div>,
+        usedSkills: ["JQuery"],
+        duration_day: 0,
+        duration_hour: 0,
+        descJSX: (
+            <>
+                <h3>
+                    <a href="https://webdesigner-go.com/coding-practice/" target="_blank">
+                        無料コーディング練習所様
+                    </a>
+                    の
+                    <a href="https://webdesigner-go.com/coding-practice/intermediate-03/" target="_blank">
+                        ゲームサイトのコーディング練習
+                    </a>
+                    にて公開してされているコーディング仕様、デザインカンプを元に作成させていただきました。
+                </h3>
+            </>
+        ),
     },
     {
         name: "ENGBODY",
@@ -205,10 +257,23 @@ const works: WorkType[] = [
         siteUrl: "https://sum-bocfob.github.io/engbody/",
         fromComp: true,
         type: "Webサイト",
-        usedSkills: ["Vite", "vite-plugin-handlebars", "Sass", "FLOCSS", "JQuery", "Motion"],
-        duration_day: 4,
-        duration_hour: 27,
-        descJSX: <div></div>,
+        usedSkills: ["Swiper", "JQuery"],
+        duration_day: 0,
+        duration_hour: 0,
+        descJSX: (
+            <>
+                <h3>
+                    <a href="https://webdesigner-go.com/coding-practice/" target="_blank">
+                        無料コーディング練習所様
+                    </a>
+                    の
+                    <a href="https://webdesigner-go.com/coding-practice/intermediate-02/" target="_blank">
+                        ジムサイトのコーディング練習
+                    </a>
+                    にて公開してされているコーディング仕様、デザインカンプを元に作成させていただきました。
+                </h3>
+            </>
+        ),
     },
 ];
 

@@ -41,4 +41,24 @@
         list-style-type: disc;
         list-style-position: inside;
     }
+
+    a {
+        text-decoration: underline;
+    }
+
+    blockquote {
+        background-color: #eee;
+        padding: 2em;
+        border-radius: 5px;
+        h5 {
+            font-weight: bold;
+        }
+        h5:not(:first-of-type) {
+            margin-top: 1lh;
+        }
+
+        p {
+            margin-top: 0;
+        }
+    }
 }
