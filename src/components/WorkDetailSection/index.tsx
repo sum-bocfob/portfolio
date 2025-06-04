@@ -10,7 +10,7 @@ const WorkDetailSection = (props: { work: WorkType }) => {
     return (
         <Section bgBlack={false} id="">
             <Container>
-                <Heading jaText={type} enText={name} />
+                <Heading jaText={type} enText={name} upperCase={false} />
                 <div className={st.duration}>制作期間: {duration_day ? <time dateTime={`${duration_day}d`}>{duration_day}日間</time> : "未計測"}</div>
                 <p className={st.subText}>{fromComp ? "無料で公開していただいているデザインカンプを元に作成させていただきました。" : "chatGPTに架空のクライアントになってもらい、その依頼に対応する形で作成しました。"}</p>
                 <div className={st.contents}>
