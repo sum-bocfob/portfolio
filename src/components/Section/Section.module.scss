@@ -2,6 +2,7 @@
 
 .section {
     padding: 64px 0;
+    position: relative;
 
     // ヘッダーとの重なり回避
     &:first-of-type {
@@ -12,8 +13,24 @@
 .black {
     background: $c_black;
     color: $c_white;
+
+    .bg_tri {
+        background-color: $c_white;
+    }
 }
 .white {
     background: $c_white;
     color: $c_black;
+
+    .bg_tri {
+        background-color: $c_black;
+    }
+}
+
+.bg_tri {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 64px;
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
 }
