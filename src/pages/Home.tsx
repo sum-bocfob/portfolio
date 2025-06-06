@@ -7,6 +7,7 @@ import Works from "../components/Works";
 function Home() {
     return (
         <>
+            <title>久野拓也のポートフォリオ</title>
             <Header />
             <Profile />
             <Skills />
