@@ -18,6 +18,11 @@
         background-color: $c_white;
     }
 }
+
+.black:last-of-type .bg_tri {
+    background-color: $c_black;
+}
+
 .white {
     background: $c_white;
     color: $c_black;
