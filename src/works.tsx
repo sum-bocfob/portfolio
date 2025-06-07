@@ -1,12 +1,12 @@
-import img_ichiyoan from "./assets/site_ichiyoan.png";
-import img_lumo from "./assets/site_lumoCreatives.png";
-import img_mellow from "./assets/site_mellowSoundStudio.png";
-import img_cafe from "./assets/site_cafe.png";
-import img_fa from "./assets/site_faExhibition.png";
-import img_bbb from "./assets/site_bbb.png";
-import img_sneakers from "./assets/site_sneakers.png";
-import img_planet from "./assets/site_planetHunters.png";
-import img_engbody from "./assets/site_engbody.png";
+import img_ichiyoan from "./assets/site_ichiyoan.jpg";
+import img_lumo from "./assets/site_lumoCreatives.jpg";
+import img_mellow from "./assets/site_mellowSoundStudio.jpg";
+import img_cafe from "./assets/site_cafe.jpg";
+import img_fa from "./assets/site_faExhibition.jpg";
+import img_bbb from "./assets/site_bbb.jpg";
+import img_sneakers from "./assets/site_sneakers.jpg";
+import img_planet from "./assets/site_planetHunters.jpg";
+import img_engbody from "./assets/site_engbody.jpg";
 
 export type WorkType = {
     name: string;
