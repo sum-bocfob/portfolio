@@ -113,7 +113,7 @@ header {
         @include media {
             span:nth-child(1) {
                 top: 9px;
-                rotate: -28deg - 180deg;
+                rotate: 180deg - 28deg;
             }
             span:nth-child(2) {
                 opacity: 0;
