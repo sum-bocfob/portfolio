@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useLocation, useNavigate } from "react-router-dom";
 gsap.registerPlugin(SplitText, ScrollToPlugin);
 
 const HeaderLink = ({ name }: { name: string }) => {
@@ -38,14 +39,26 @@ const HeaderLink = ({ name }: { name: string }) => {
         );
     };
 
-    const handleClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        gsap.to(window, { duration: 0.25, ease: "power2.out", scrollTo: { y: `#${name.toLowerCase()}`, offsetY: 80 } });
+    const location = useLocation();
+    const isHome = location.pathname === "/";
+    const navigate = useNavigate();
+
+    const handleClick = (e: React.MouseEvent, id: string) => {
+        if (isHome) {
+            e.preventDefault();
+            gsap.to(window, { duration: 0.25, ease: "power2.out", scrollTo: { y: `#${name.toLowerCase()}`, offsetY: 80 } });
+        } else {
+            e.preventDefault();
+            navigate("/", { replace: false });
+            setTimeout(() => {
+                gsap.to(window, { duration: 0.25, ease: "power2.out", scrollTo: { y: `#${id}`, offsetY: 80 } });
+            }, 100);
+        }
     };
 
     return (
         <li>
-            <a ref={linkRef} href={`#${name.toLowerCase()}`} onMouseEnter={handleMouseEnter} onClick={(e) => handleClick(e)} className="upperCase">
+            <a ref={linkRef} href={isHome ? `#${name.toLowerCase()}` : `/#${name.toLowerCase()}`} onMouseEnter={handleMouseEnter} onClick={(e) => handleClick(e, name.toLowerCase())} className="upperCase">
                 {name}
             </a>
         </li>
