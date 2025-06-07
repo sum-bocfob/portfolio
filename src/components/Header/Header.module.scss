@@ -4,12 +4,34 @@ header {
     background-color: $c_black;
     padding: 24px 0;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: $header_height;
     z-index: 100;
 
+    @include media {
+        // background-color: #c04747;
+    }
+
     nav {
         height: 100%;
+
+        @include media {
+            position: fixed;
+            inset: 0;
+            top: -50%;
+            width: 100vw;
+            height: 100vh;
+            background-color: $c_black;
+            z-index: 5;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+        }
+
+        &.open {
+            @include media {
+                top: 0;
+            }
+        }
     }
 
     .header_list {
@@ -21,10 +43,21 @@ header {
         font-family: "Josefin Sans", sans-serif;
         @include font-config(header);
 
+        @include media {
+            flex-direction: column;
+            justify-content: center;
+            gap: 64px;
+        }
+
         li {
             flex-grow: 1;
             text-align: center;
             height: 100%;
+
+            @include media {
+                flex-grow: 0;
+                height: auto;
+            }
 
             a {
                 display: inline-block;
@@ -38,6 +71,57 @@ header {
 
         li + li {
             border-left: 2px solid $c_white;
+
+            @include media {
+                border-left: none;
+            }
+        }
+    }
+
+    // ハンバーガーメニュー
+    .hamburger {
+        // display: none;
+        width: 48px;
+        height: 24px;
+        position: absolute;
+        top: 28px;
+        right: 16px;
+        z-index: 500;
+
+        @include media {
+            display: block;
+
+            span {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: $c_white;
+                position: absolute;
+                transition-duration: 0.3s;
+
+                &:nth-child(2) {
+                    top: 9px;
+                }
+                &:nth-child(3) {
+                    top: 20px;
+                }
+            }
+        }
+    }
+
+    .hamburger.open {
+        @include media {
+            span:nth-child(1) {
+                top: 9px;
+                rotate: -28deg - 180deg;
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                top: 9px;
+                rotate: 28deg + 180deg;
+            }
         }
     }
 }

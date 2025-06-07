@@ -1,6 +1,7 @@
 @use "sass:map";
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Gothic&display=swap");
 
+// **********変数
 $c_white: #fff;
 $c_black: #262626;
 $c_meter_main: #528de6;
@@ -8,6 +9,7 @@ $c_meter_frame: #eeeeee;
 $c_meter_bg: #686868;
 $header_height: 80px;
 
+// **************font
 @function rem($px) {
     @return calc($px / 16) * 1rem;
 }
@@ -26,9 +28,9 @@ $font-presets: (
         line-height: 1,
     ),
     headingSP: (
-        font-family: "Sawarabi Gothic,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans, Meiryo, sans-serif",
+        font-family: "Josefin Sans,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans, Meiryo, sans-serif",
         font-size: rem(48),
-        font-weight: normal,
+        font-weight: bold,
         line-height: 1,
     ),
     headingSmall: (
@@ -54,6 +56,18 @@ $font-presets: (
 
     @each $prop, $val in $preset {
         #{$prop}: #{$val};
+    }
+}
+
+// ************メディアクエリ
+$media_widths: (
+    "sp": "375px",
+    "md": "768px",
+);
+
+@mixin media($width: "md") {
+    @media (max-width: map.get($media_widths, $width)) {
+        @content;
     }
 }
 

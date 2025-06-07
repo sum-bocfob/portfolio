@@ -8,5 +8,9 @@
     h2 {
         @include font-config(headingPC);
         margin-top: 16px;
+
+        @include media {
+            @include font-config(headingSP);
+        }
     }
 }
