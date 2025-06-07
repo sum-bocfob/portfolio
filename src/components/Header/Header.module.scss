@@ -18,7 +18,7 @@ header {
         @include media {
             position: fixed;
             inset: 0;
-            top: -50%;
+            top: -100%;
             width: 100vw;
             height: 100vh;
             background-color: $c_black;

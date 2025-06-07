@@ -1,6 +1,11 @@
+@use "../../index.scss" as *;
+
 .grid {
     margin-top: 56px;
     // justify-content: space-between;
+    @include media {
+        margin-top: 32px;
+    }
 }
 
 .grid2 {
@@ -8,10 +13,19 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 48px;
     row-gap: 32px;
+
+    @include media {
+        grid-template-columns: 1fr;
+    }
 }
 
 .grid3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 64px;
+
+    @include media {
+        grid-template-columns: 1fr;
+        row-gap: 72px;
+    }
 }

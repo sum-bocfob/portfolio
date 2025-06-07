@@ -75,6 +75,16 @@ $media_widths: (
     text-transform: uppercase;
 }
 
+:root {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 body {
     @include font-config(body);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
 }

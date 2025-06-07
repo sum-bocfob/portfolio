@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
+
+    @include media {
+        gap: 32px;
+    }
 }
 
 .profile_desc_list {
@@ -11,6 +15,18 @@
     display: flex;
     gap: 64px;
     position: relative;
+
+    @include media {
+        margin-top: 32px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .birth {
+        @include media {
+            margin-top: 8px;
+        }
+    }
 
     dt {
         @include font-config(body);
@@ -24,6 +40,13 @@
         position: absolute;
         right: 0;
         top: -200px;
-        z-index: -1;
+        // z-index: -1;
+        filter: brightness(50%);
+
+        @include media {
+            position: static;
+            width: 100%;
+            margin-top: 8px;
+        }
     }
 }

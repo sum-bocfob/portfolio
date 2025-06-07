@@ -1,0 +1,7 @@
+@use "../../index.scss" as *;
+
+.link {
+    @include media {
+        padding: 16px;
+    }
+}

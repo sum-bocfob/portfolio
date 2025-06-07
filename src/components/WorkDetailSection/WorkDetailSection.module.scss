@@ -1,3 +1,5 @@
+@use "../../index.scss" as *;
+
 .duration {
     margin-top: 16px;
 }
@@ -10,6 +12,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+
+    @include media {
+        flex-direction: column;
+    }
 }
 
 .imgAndLink {
@@ -17,11 +23,10 @@
     flex-direction: column;
     align-items: center;
     width: 400px;
-}
 
-.img {
-    width: 400px;
-    height: 225px;
+    @include media {
+        width: 100%;
+    }
 }
 
 .link {
@@ -32,14 +37,36 @@
     margin-top: 16px;
     text-decoration: underline;
     transition-duration: 0.3s;
+    width: 100%;
 
     &:hover {
         opacity: 0.8;
     }
 }
 
+.img {
+    width: 400px;
+    aspect-ratio: 16/9;
+    // height: 225px;
+
+    @include media {
+        width: 100%;
+    }
+}
+
+.url {
+    width: 100%;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
 .desc {
     width: 54.16666666666667%;
+
+    @include media {
+        width: 100%;
+        margin-top: 40px;
+    }
 
     h4,
     p {

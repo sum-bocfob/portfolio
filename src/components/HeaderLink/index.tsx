@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useLocation, useNavigate } from "react-router-dom";
+import st from "./HeaderLink.module.scss";
+
 gsap.registerPlugin(SplitText, ScrollToPlugin);
 
 const HeaderLink = ({ name }: { name: string }) => {
@@ -58,7 +60,7 @@ const HeaderLink = ({ name }: { name: string }) => {
 
     return (
         <li>
-            <a ref={linkRef} href={isHome ? `#${name.toLowerCase()}` : `/#${name.toLowerCase()}`} onMouseEnter={handleMouseEnter} onClick={(e) => handleClick(e, name.toLowerCase())} className="upperCase">
+            <a ref={linkRef} href={isHome ? `#${name.toLowerCase()}` : `/#${name.toLowerCase()}`} onMouseEnter={handleMouseEnter} onClick={(e) => handleClick(e, name.toLowerCase())} className={`upperCase ${st.link}`}>
                 {name}
             </a>
         </li>

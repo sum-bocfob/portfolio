@@ -16,7 +16,7 @@ const Profile = () => {
                         <dt>久野 拓也</dt>
                         <div>
                             <dd aria-hidden="true">TAKUYA HISANO</dd>
-                            <dd>
+                            <dd className={st.birth}>
                                 <time dateTime="1993-11-08">1993/11/08</time>
                             </dd>
                         </div>

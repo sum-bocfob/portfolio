@@ -3,8 +3,6 @@ import Container from "../Container";
 import Section from "../Section";
 import st from "./UsedSkills.module.scss";
 
-import React from "react";
-
 const UsedSkills = (props: { work: WorkType }) => {
     return (
         <Section bgBlack={true} id="">

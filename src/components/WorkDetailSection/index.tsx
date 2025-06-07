@@ -17,7 +17,7 @@ const WorkDetailSection = (props: { work: WorkType }) => {
                     <div className={st.imgAndLink}>
                         <a className={st.link} href={siteUrl} target="_blank">
                             <img className={st.img} src={img} alt="" />
-                            {siteUrl}
+                            <p className={st.url}>{siteUrl}</p>
                         </a>
                     </div>
                     <div className={st.desc}>{descJSX}</div>

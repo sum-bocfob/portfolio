@@ -4,9 +4,17 @@
     padding: 80px 0;
     position: relative;
 
+    @include media {
+        padding: 64px 0;
+    }
+
     // ヘッダーとの重なり回避
     &:first-of-type {
         padding-top: $header_height + 80px;
+
+        @include media {
+            padding-top: $header_height + 64px;
+        }
     }
 }
 
@@ -38,4 +46,8 @@
     width: 100%;
     height: 80px;
     clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+
+    @include media {
+        height: 64px;
+    }
 }
