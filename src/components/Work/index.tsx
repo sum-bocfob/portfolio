@@ -2,8 +2,6 @@ import st from "./Work.module.scss";
 import { type WorkType } from "../../works";
 import newTabIcon from "../../assets/newPage.svg";
 
-import React from "react";
-
 const Work = ({ name, img, pageUrl, siteUrl, fromComp }: WorkType) => {
     return (
         <li className={st.item}>

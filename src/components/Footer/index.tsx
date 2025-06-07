@@ -2,8 +2,6 @@ import Container from "../Container";
 import Heading from "../Heading";
 import st from "./Footer.module.scss";
 
-import React from "react";
-
 const Footer = () => {
     return (
         <footer id="contact" className={st.footer}>
