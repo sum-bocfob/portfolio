@@ -25,7 +25,7 @@ const skills: SkillType[] = [
     },
     {
         name: "CSS",
-        desc: "レスポンシブなデザインが可能?????????",
+        desc: "レスポンシブなページ作成が可能。BEMの基本を理解している。",
         level: 3,
         img: img_css,
     },
