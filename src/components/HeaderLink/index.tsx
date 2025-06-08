@@ -14,12 +14,14 @@ const HeaderLink = ({ name }: { name: string }) => {
     const charRef = useRef<HTMLElement[] | null>(null);
 
     useEffect(() => {
-        const split = new SplitText(linkRef.current, { type: "chars" });
-        charRef.current = split.chars as HTMLElement[];
+        document.fonts.ready.then(function () {
+            const split = new SplitText(linkRef.current, { type: "chars" });
+            charRef.current = split.chars as HTMLElement[];
 
-        return () => {
-            split.revert();
-        };
+            return () => {
+                split.revert();
+            };
+        });
     }, []);
 
     const handleMouseEnter = () => {
