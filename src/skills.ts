@@ -7,6 +7,7 @@ import img_react from "../src/assets/logo_react.svg";
 import img_vscode from "../src/assets/logo_vscode.svg";
 import img_figma from "../src/assets/logo_figma.svg";
 import img_blender from "../src/assets/logo_blender.png";
+import img_tool from "../src/assets/logo_tool.svg";
 
 export type SkillType = {
     name: string;
@@ -68,13 +69,13 @@ const skills: SkillType[] = [
         name: "Photoshop",
         desc: "画像の簡単な編集や基本操作が可能",
         level: 1,
-        img: "",
+        img: img_tool,
     },
     {
         name: "Illustrator",
         desc: "簡単なロゴ及びイラストの作成が可能",
         level: 1,
-        img: "",
+        img: img_tool,
     },
     {
         name: "Blender",

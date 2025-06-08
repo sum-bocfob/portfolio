@@ -3,7 +3,7 @@ import Heading from "../Heading";
 import Section from "../Section";
 import st from "./Profile.module.scss";
 
-import img from "../../assets/Rectangle.jpg";
+import img from "../../assets/profile.jpg";
 
 const Profile = () => {
     return (

@@ -17,6 +17,8 @@ function WorkDetail() {
     return (
         <>
             <title>{`${work.name}(制作物) | 久野拓也のポートフォリオ`}</title>
+            <meta name="description" content={`制作した${work.name}の詳細ページ`} />
+
             <Header />
             <WorkDetailSection work={work} />
             <UsedSkills work={work} />

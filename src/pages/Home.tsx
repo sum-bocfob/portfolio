@@ -8,6 +8,7 @@ function Home() {
     return (
         <>
             <title>久野拓也のポートフォリオ</title>
+            <meta name="description" content="久野拓也のポートフォリオサイトです。フロントエンドエンジニアを目指して就職活動中です。" />
             <Header />
             <Profile />
             <Skills />

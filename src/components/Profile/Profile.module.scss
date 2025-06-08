@@ -40,13 +40,20 @@
         position: absolute;
         right: 0;
         top: -200px;
-        // z-index: -1;
-        filter: brightness(50%);
+        width: 420px;
+        height: 300px;
 
         @include media {
             position: static;
+            height: auto;
             width: 100%;
             margin-top: 8px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 420/300;
         }
     }
 }

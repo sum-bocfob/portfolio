@@ -23,6 +23,26 @@ export type WorkType = {
 
 const works: WorkType[] = [
     {
+        name: "ポートフォリオサイト",
+        img: "",
+        pageUrl: "/work_detail/portfolio",
+        siteUrl: "",
+        fromComp: false,
+        type: "Webサイト",
+        usedSkills: ["React", "React Router", "Vite", "vite-plugin-imagemin", "GSAP", "Sass"],
+        duration_day: 8,
+        duration_hour: 22,
+        descJSX: (
+            <>
+                <p>
+                    現在見ていただいているサイトです。
+                    <br />
+                    Reactを使用して作ってみました。
+                </p>
+            </>
+        ),
+    },
+    {
         name: "一葉庵",
         img: img_ichiyoan,
         pageUrl: "/work_detail/ichiyoan",
