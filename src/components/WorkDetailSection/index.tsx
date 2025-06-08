@@ -15,10 +15,14 @@ const WorkDetailSection = (props: { work: WorkType }) => {
                 <p className={st.subText}>{fromComp ? "無料で公開していただいているデザインカンプを元に作成させていただきました。" : isPortfolio ? "" : "chatGPTに架空のクライアントになってもらい、その依頼に対応する形で作成しました。"}</p>
                 <div className={st.contents}>
                     <div className={st.imgAndLink}>
-                        <a className={st.link} href={siteUrl} target="_blank">
+                        {isPortfolio ? (
                             <img className={st.img} src={img} alt="" />
-                            <p className={st.url}>{siteUrl}</p>
-                        </a>
+                        ) : (
+                            <a className={st.link} href={siteUrl} target="_blank">
+                                <img className={st.img} src={img} alt="" />
+                                <p className={st.url}>{siteUrl}</p>
+                            </a>
+                        )}
                     </div>
                     <div className={st.desc}>{descJSX}</div>
                 </div>
