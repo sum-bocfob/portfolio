@@ -10,7 +10,7 @@ const Work = ({ name, img, pageUrl, siteUrl, fromComp }: WorkType) => {
                 <div className={st.imgWrapper}>
                     <img className={st.thumbnail} src={img} alt={`${name}のサムネイル`} />
                 </div>
-                <h3 className={fromComp ? st.note : "tes"}>{name}</h3>
+                <h3 className={fromComp ? st.note : ""}>{name}</h3>
             </Link>
             <a className={st.siteLink} href={siteUrl} target="_blank">
                 <img src={newTabIcon} alt="" className={st.siteIcon}></img>
