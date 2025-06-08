@@ -3,7 +3,7 @@ import { type WorkType } from "../../works";
 import newTabIcon from "../../assets/newPage.svg";
 import { Link } from "react-router-dom";
 
-const Work = ({ name, img, pageUrl, siteUrl, fromComp }: WorkType) => {
+const Work = ({ name, img, pageUrl, siteUrl, fromComp, isPortfolio }: WorkType) => {
     return (
         <li className={st.item}>
             <Link className={st.pageLink} to={pageUrl}>
@@ -12,9 +12,11 @@ const Work = ({ name, img, pageUrl, siteUrl, fromComp }: WorkType) => {
                 </div>
                 <h3 className={fromComp ? st.note : ""}>{name}</h3>
             </Link>
-            <a className={st.siteLink} href={siteUrl} target="_blank">
-                <img src={newTabIcon} alt="" className={st.siteIcon}></img>
-            </a>
+            {isPortfolio || (
+                <a className={st.siteLink} href={siteUrl} target="_blank">
+                    <img src={newTabIcon} alt="" className={st.siteIcon}></img>
+                </a>
+            )}
         </li>
     );
 };
