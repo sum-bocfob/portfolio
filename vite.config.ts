@@ -1,12 +1,3 @@
-// import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
-
-// https://vite.dev/config/
-// export default defineConfig({
-//     plugins: [react()],
-//     base: "/portfolio/",
-// });
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import viteImagemin from "vite-plugin-imagemin";
@@ -53,12 +44,12 @@ export default defineConfig({
             },
         }),
     ],
-    build: {
-        rollupOptions: {
-            input: {
-                main: "index.html",
-                fallback: "index.html",
-            },
-        },
-    },
+    // build: {
+    //     rollupOptions: {
+    //         input: {
+    //             main: "index.html",
+    //             fallback: "index.html",
+    //         },
+    //     },
+    // },
 });
