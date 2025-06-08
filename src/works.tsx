@@ -1,3 +1,4 @@
+import img_portfolio from "./assets/site_portfolio.jpg";
 import img_ichiyoan from "./assets/site_ichiyoan.jpg";
 import img_lumo from "./assets/site_lumoCreatives.jpg";
 import img_mellow from "./assets/site_mellowSoundStudio.jpg";
@@ -19,12 +20,13 @@ export type WorkType = {
     duration_day: number;
     duration_hour: number;
     descJSX: React.ReactNode;
+    isPortfolio?: boolean;
 };
 
 const works: WorkType[] = [
     {
         name: "ポートフォリオサイト",
-        img: "",
+        img: img_portfolio,
         pageUrl: "/work_detail/portfolio",
         siteUrl: "",
         fromComp: false,
@@ -39,8 +41,10 @@ const works: WorkType[] = [
                     <br />
                     Reactを使用して作ってみました。
                 </p>
+                <p>静的なサイトなので、Reactのstateなどの機能は使用していませんが、UIをコンポーネント化することで、制作を効率化できたと思います。</p>
             </>
         ),
+        isPortfolio: true,
     },
     {
         name: "一葉庵",
