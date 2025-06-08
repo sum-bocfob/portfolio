@@ -32,8 +32,8 @@ const works: WorkType[] = [
         fromComp: false,
         type: "Webサイト",
         usedSkills: ["React", "React Router", "Vite", "vite-plugin-imagemin", "GSAP", "Sass"],
-        duration_day: 8,
-        duration_hour: 22,
+        duration_day: 9,
+        duration_hour: 30,
         descJSX: (
             <>
                 <p>
