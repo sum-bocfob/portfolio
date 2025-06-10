@@ -7,7 +7,6 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
     return (
         <>
-            <link rel="icon" href="./src/assets/my_favicon-white.svg" />
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
