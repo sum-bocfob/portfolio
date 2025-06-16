@@ -28,15 +28,15 @@
         }
     }
 
-    dt {
+    h3 {
         @include font-config(body);
         font-size: rem(48);
     }
-    dd {
+    p {
         @include font-config(body);
         font-size: rem(24);
     }
-    .img {
+    .myImage_p {
         position: absolute;
         right: 0;
         top: -200px;
@@ -50,10 +50,40 @@
             margin-top: 8px;
         }
 
-        img {
+        .myImage {
             width: 100%;
             height: auto;
             aspect-ratio: 420/300;
         }
+
+        div {
+            @include media {
+                position: relative;
+            }
+        }
     }
+
+    .qualification {
+        width: 80px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        translate: -50% -50%;
+        background-color: white;
+        box-shadow: 2px 2px 5px rgb(92, 92, 92);
+        padding: 8px;
+        border-radius: 8px;
+
+        @include media {
+            translate: 0 0;
+            border-radius: 0 0 8px 0;
+        }
+    }
+}
+
+.profile_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }

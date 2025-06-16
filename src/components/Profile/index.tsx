@@ -3,7 +3,8 @@ import Heading from "../Heading";
 import Section from "../Section";
 import st from "./Profile.module.scss";
 
-import img from "../../assets/profile1.jpg";
+import myImg from "../../assets/profile1.jpg";
+import lv1Img from "../../assets/lv1_logo.gif";
 
 const Profile = () => {
     return (
@@ -12,25 +13,34 @@ const Profile = () => {
                 <Heading jaText="プロフィール" enText="Profile" />
 
                 <div className={st.profile_texts}>
-                    <dl className={st.profile_desc_list}>
-                        <dt>久野 拓也</dt>
+                    <div className={st.profile_desc_list}>
+                        <h3>久野 拓也</h3>
                         <div>
-                            <dd aria-hidden="true">TAKUYA HISANO</dd>
-                            <dd className={st.birth}>
+                            <p aria-hidden="true">TAKUYA HISANO</p>
+                            <p className={st.birth}>
                                 <time dateTime="1993-11-08">1993/11/08</time>
-                            </dd>
+                            </p>
                         </div>
-                        <dd className={st.img}>
-                            <img src={img} alt="3DCGソフトBlenderで作成した私のアバター" width={420} height={300} />
-                        </dd>
-                    </dl>
-                    <p>
-                        独学でWebサイト制作を勉強した後、基礎から学びなおすため、職業訓練に参加。
-                        <br />
-                        訓練以外でも、意欲的に様々な知識、技術を勉強中。
-                        <br />
-                        趣味は3DCG制作。
-                    </p>
+                        <p className={st.myImage_p}>
+                            <div>
+                                <img className={st.myImage} src={myImg} alt="3DCGソフトBlenderで作成した私のアバター" width={420} height={300} />
+                                <img className={st.qualification} src={lv1Img} alt="HTML5プロフェッショナル認定試験ロゴ" />
+                            </div>
+                        </p>
+                    </div>
+                    <div className={st.profile_desc}>
+                        <p>
+                            独学でWebサイト制作を勉強した後、基礎から学びなおすため、職業訓練に参加。
+                            <br />
+                            訓練以外でも、意欲的に様々な知識、技術を勉強中。
+                            <br />
+                            趣味は3DCG制作。
+                            <br />
+                        </p>
+                        <p>
+                            <time dateTime="2025-06-16">2025年6月16日</time> 「HTML5プロフェッショナル認定 レベル1」合格
+                        </p>
+                    </div>
                 </div>
             </Container>
         </Section>
