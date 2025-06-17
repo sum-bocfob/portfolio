@@ -29,10 +29,11 @@ const Profile = () => {
                         </p>
                     </div>
                     <div className={st.profile_desc}>
+                        <p>フロントエンドエンジニア志望。</p>
                         <p>
                             独学でWebサイト制作を勉強した後、基礎から学びなおすため、職業訓練に参加。
                             <br />
-                            訓練以外でも、意欲的に様々な知識、技術を勉強中。
+                            訓練以外でも意欲的に、ReactやTypeScriptなど、様々な知識・技術を勉強中。
                             <br />
                             趣味は3DCG制作。
                             <br />
