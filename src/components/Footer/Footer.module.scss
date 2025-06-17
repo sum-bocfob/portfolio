@@ -9,10 +9,29 @@
         margin-top: 56px;
     }
 
+    .links {
+        display: flex;
+        align-items: baseline;
+        gap: 80px;
+    }
+
     .address {
         display: block;
         margin-top: 32px;
         text-decoration: underline;
         @include font-config(headingSmall);
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .x_link {
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
