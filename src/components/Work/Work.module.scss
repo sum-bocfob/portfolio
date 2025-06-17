@@ -1,8 +1,8 @@
 @use "../../index.scss" as *;
 
 .item {
-    width: 272px;
-    height: auto;
+    // width: 272px;
+    // height: auto;
     position: relative;
 
     @include media {
@@ -54,6 +54,14 @@
             top: -8px;
             right: -4px;
         }
+
+        &.inSubPage {
+            @include font-config(body);
+
+            &::after {
+                content: "";
+            }
+        }
     }
 }
 
@@ -69,6 +77,13 @@
     &:hover {
         scale: 1.1 1.1;
     }
+}
+
+.siteLink_sub {
+    width: 24px;
+    height: 24px;
+    right: 8px;
+    top: 8px;
 }
 
 .siteIcon {

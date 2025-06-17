@@ -1,0 +1,6 @@
+@use "../../index.scss" as *;
+
+.title {
+    @include font-config(headingSmall);
+    text-align: center;
+}

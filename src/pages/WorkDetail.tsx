@@ -5,6 +5,7 @@ import WorkDetailSection from "../components/WorkDetailSection";
 
 import works from "../works";
 import UsedSkills from "../components/UsedSkills";
+import Works_Mini from "../components/Works_Mini";
 
 function WorkDetail() {
     const { id } = useParams<{ id: string }>();
@@ -22,6 +23,7 @@ function WorkDetail() {
             <Header />
             <WorkDetailSection work={work} />
             <UsedSkills work={work} />
+            <Works_Mini curWork={work} />
             <Footer />
         </>
     );
