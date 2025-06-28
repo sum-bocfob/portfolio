@@ -1,0 +1,86 @@
+@use "../../index.scss" as *;
+
+$duration: 0.4s;
+$delay: 0.2s;
+
+.openAnim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: $c_meter_main;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: $c_meter_main;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.first {
+    &::before {
+        animation: toBL $duration $delay ease-in-out forwards;
+        background-color: $c_white;
+        z-index: 5000;
+    }
+    &::after {
+        animation: toTR $duration $delay ease-in-out forwards;
+        background-color: $c_white;
+        z-index: 5000;
+    }
+}
+
+.second {
+    &::before {
+        animation: toBL $duration $delay * 2 ease-in-out forwards;
+        background-color: color-mix(in srgb, $c_meter_main 50%, $c_white);
+        z-index: 4999;
+    }
+    &::after {
+        animation: toTR $delay * 2 $duration ease-in-out forwards;
+        background-color: color-mix(in srgb, $c_meter_main 50%, $c_white);
+        z-index: 4999;
+    }
+}
+
+.third {
+    &::before {
+        animation: toBL $duration $delay * 3 ease-in-out forwards;
+        background-color: $c_meter_main;
+        z-index: 4998;
+    }
+    &::after {
+        animation: toTR $duration $delay * 3 ease-in-out forwards;
+        background-color: $c_meter_main;
+        z-index: 4998;
+    }
+}
+
+@keyframes toTR {
+    from {
+        translate: 0 0;
+    }
+    to {
+        translate: 100% 0;
+    }
+}
+
+@keyframes toBL {
+    from {
+        translate: 0 0;
+    }
+    to {
+        translate: -100% 0;
+    }
+}
