@@ -13,6 +13,7 @@ const Section = ({ bgBlack, id, children }: Prop) => {
         <section id={id} className={`${st.section} ${bgBlack ? st.black : st.white}`}>
             {children}
             <div className={st.bg_tri}></div>
+            <div className={st.lines}></div>
         </section>
     );
 };

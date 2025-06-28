@@ -51,3 +51,33 @@
         height: 64px;
     }
 }
+
+.lines {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 200vw;
+    height: 32px;
+    background: url(../../assets/lines.svg);
+    background-repeat: repeat-x;
+    background-size: 256px 32px;
+    background-position: left center;
+    mix-blend-mode: difference;
+    z-index: 5;
+    transform-origin: left;
+    rotate: calc(-1 * atan2(80px, 100vw));
+    animation: lineMove 30s infinite linear;
+
+    @include media {
+        rotate: calc(-1 * atan2(64px, 100vw));
+    }
+}
+
+@keyframes lineMove {
+    from {
+        translate: -100vw 80px;
+    }
+    to {
+        translate: 0vw -10/8vw;
+    }
+}
