@@ -1,12 +1,8 @@
 import Container from "../Container";
 import st from "./Header.module.scss";
-import { gsap } from "gsap";
 
-import { SplitText } from "gsap/SplitText";
 import HeaderLink from "../HeaderLink";
 import { useState } from "react";
-
-gsap.registerPlugin(SplitText);
 
 const headerTexts: string[] = ["Profile", "Skills", "Works", "Contact"];
 

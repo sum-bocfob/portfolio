@@ -1,8 +1,5 @@
 @use "../../index.scss" as *;
 
-$duration: 0.4s;
-$delay: 0.2s;
-
 .openAnim {
     position: fixed;
     top: 0;
@@ -30,12 +27,12 @@ $delay: 0.2s;
 
 .first {
     &::before {
-        animation: toBL $duration $delay ease-in-out forwards;
+        animation: toBL $openAnim_duration $openAnim_delay ease-in-out forwards;
         background-color: $c_white;
         z-index: 5000;
     }
     &::after {
-        animation: toTR $duration $delay ease-in-out forwards;
+        animation: toTR $openAnim_duration $openAnim_delay ease-in-out forwards;
         background-color: $c_white;
         z-index: 5000;
     }
@@ -43,12 +40,12 @@ $delay: 0.2s;
 
 .second {
     &::before {
-        animation: toBL $duration $delay * 2 ease-in-out forwards;
+        animation: toBL $openAnim_duration $openAnim_delay * 2 ease-in-out forwards;
         background-color: color-mix(in srgb, $c_meter_main 50%, $c_white);
         z-index: 4999;
     }
     &::after {
-        animation: toTR $delay * 2 $duration ease-in-out forwards;
+        animation: toTR $openAnim_delay * 2 $openAnim_duration ease-in-out forwards;
         background-color: color-mix(in srgb, $c_meter_main 50%, $c_white);
         z-index: 4999;
     }
@@ -56,12 +53,12 @@ $delay: 0.2s;
 
 .third {
     &::before {
-        animation: toBL $duration $delay * 3 ease-in-out forwards;
+        animation: toBL $openAnim_duration $openAnim_delay * 3 ease-in-out forwards;
         background-color: $c_meter_main;
         z-index: 4998;
     }
     &::after {
-        animation: toTR $duration $delay * 3 ease-in-out forwards;
+        animation: toTR $openAnim_duration $openAnim_delay * 3 ease-in-out forwards;
         background-color: $c_meter_main;
         z-index: 4998;
     }

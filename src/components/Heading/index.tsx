@@ -1,4 +1,7 @@
 import st from "./Heading.module.scss";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 type Prop = {
     jaText: string;
