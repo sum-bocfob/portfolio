@@ -65,19 +65,19 @@
     mix-blend-mode: difference;
     z-index: 5;
     transform-origin: left;
-    rotate: calc(-1 * atan2(80px, 100vw));
-    animation: lineMove 30s infinite linear;
+    transform: rotate(calc(-1 * atan2(80px, 100vw)));
+    animation: lineMove 6s infinite linear;
 
     @include media {
-        rotate: calc(-1 * atan2(64px, 100vw));
+        transform: rotate(calc(-1 * atan2(64px, 100vw)));
     }
 }
 
 @keyframes lineMove {
     from {
-        translate: -100vw 80px;
+        transform: rotate(calc(-1 * atan2(80px, 100vw))) translateX(-256px);
     }
     to {
-        translate: 0vw -10/8vw;
+        transform: rotate(calc(-1 * atan2(80px, 100vw))) translateX(0);
     }
 }
