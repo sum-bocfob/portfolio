@@ -84,6 +84,7 @@ $media_widths: (
 
 body {
     @include font-config(body);
+    overflow-x: hidden;
 }
 
 img {
