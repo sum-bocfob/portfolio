@@ -70,6 +70,7 @@
 
     @include media {
         transform: rotate(calc(-1 * atan2(64px, 100vw)));
+        animation: lineMoveSP 6s infinite linear;
     }
 }
 
@@ -79,5 +80,14 @@
     }
     to {
         transform: rotate(calc(-1 * atan2(80px, 100vw))) translateX(0);
+    }
+}
+
+@keyframes lineMoveSP {
+    from {
+        transform: rotate(calc(-1 * atan2(64px, 100vw))) translateX(-256px);
+    }
+    to {
+        transform: rotate(calc(-1 * atan2(64px, 100vw))) translateX(0);
     }
 }
