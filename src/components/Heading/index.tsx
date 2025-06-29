@@ -11,7 +11,7 @@ type Prop = {
     jaText: string;
     enText: string;
     upperCase?: boolean;
-    animType?: 0 | 1 | 2;
+    animType?: -1 | 0 | 1 | 2;
 };
 
 const Heading = ({ jaText, enText, upperCase = true, animType = 0 }: Prop) => {
@@ -21,29 +21,31 @@ const Heading = ({ jaText, enText, upperCase = true, animType = 0 }: Prop) => {
     const charRef = useRef<HTMLElement[] | null>(null);
 
     useGSAP(() => {
-        document.fonts.ready.then(function () {
-            const options: SplitText.Vars =
-                animType === 2
-                    ? { type: "chars, lines" }
-                    : {
-                          type: "chars, lines",
-                          mask: "lines",
-                      };
-            const split = SplitText.create(h2Ref.current, options);
-            charRef.current = split.chars as HTMLElement[];
+        if (animType !== -1) {
+            document.fonts.ready.then(function () {
+                const options: SplitText.Vars =
+                    animType === 2
+                        ? { type: "chars, lines" }
+                        : {
+                              type: "chars, lines",
+                              mask: "lines",
+                          };
+                const split = SplitText.create(h2Ref.current, options);
+                charRef.current = split.chars as HTMLElement[];
 
-            if (animType === 0) {
-                showUp(charRef.current, h2Ref.current);
-            } else if (animType === 1) {
-                showRollUp(charRef.current, h2Ref.current);
-            } else if (animType === 2) {
-                showScaleUp(charRef.current, h2Ref.current);
-            }
+                if (animType === 0) {
+                    showUp(charRef.current, h2Ref.current);
+                } else if (animType === 1) {
+                    showRollUp(charRef.current, h2Ref.current);
+                } else if (animType === 2) {
+                    showScaleUp(charRef.current, h2Ref.current);
+                }
 
-            return () => {
-                split.revert();
-            };
-        });
+                return () => {
+                    split.revert();
+                };
+            });
+        }
     }, []);
 
     return (

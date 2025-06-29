@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 import st from "./HeaderLink.module.scss";
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText, ScrollToPlugin);
 
 const HeaderLink = ({ name }: { name: string }) => {
     // a要素
@@ -12,7 +14,7 @@ const HeaderLink = ({ name }: { name: string }) => {
     // 文字の配列
     const charRef = useRef<HTMLElement[] | null>(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         document.fonts.ready.then(function () {
             const split = new SplitText(linkRef.current, { type: "chars" });
             charRef.current = split.chars as HTMLElement[];
