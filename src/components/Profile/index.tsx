@@ -10,7 +10,7 @@ const Profile = () => {
     return (
         <Section id="profile" bgBlack={false}>
             <Container>
-                <Heading jaText="プロフィール" enText="Profile" delay={1} />
+                <Heading jaText="プロフィール" enText="Profile" delay={sessionStorage.getItem("loaded") ? 0 : 1} />
 
                 <div className={st.profile_texts}>
                     <div className={st.profile_desc_list}>

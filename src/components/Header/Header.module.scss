@@ -46,7 +46,7 @@ header {
         @include media {
             flex-direction: column;
             justify-content: center;
-            gap: 64px;
+            gap: 24px;
         }
 
         li {
