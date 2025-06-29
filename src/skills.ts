@@ -67,13 +67,13 @@ const skills: SkillType[] = [
     },
     {
         name: "Photoshop",
-        desc: "画像の簡単な編集や基本操作が可能。",
+        desc: "画像の簡単な編集や基本操作が可能",
         level: 1,
         img: img_tool,
     },
     {
         name: "Illustrator",
-        desc: "簡単なロゴ及びイラストの作成が可能。",
+        desc: "簡単なロゴ及びイラストの作成が可能",
         level: 1,
         img: img_tool,
     },

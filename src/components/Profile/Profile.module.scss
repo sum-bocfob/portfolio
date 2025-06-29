@@ -36,12 +36,11 @@
         @include font-config(body);
         font-size: rem(24);
     }
-    .myImageWrapper {
+    .myImage_p {
         position: absolute;
         right: 0;
         top: -200px;
         width: 420px;
-        width: 40%;
         height: 300px;
 
         @include media {

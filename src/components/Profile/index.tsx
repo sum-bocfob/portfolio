@@ -10,7 +10,7 @@ const Profile = () => {
     return (
         <Section id="profile" bgBlack={false}>
             <Container>
-                <Heading jaText="プロフィール" enText="Profile" delay={1} />
+                <Heading jaText="プロフィール" enText="Profile" />
 
                 <div className={st.profile_texts}>
                     <div className={st.profile_desc_list}>
@@ -21,7 +21,7 @@ const Profile = () => {
                                 <time dateTime="1993-11-08">1993/11/08</time>
                             </p>
                         </div>
-                        <div className={st.myImageWrapper}>
+                        <div className={st.myImage_p}>
                             <div>
                                 <img className={st.myImage} src={myImg} alt="3DCGソフトBlenderで作成した私のアバター" width={420} height={300} />
                                 <img className={st.qualification} src={lv1Img} alt="HTML5プロフェッショナル認定試験ロゴ" />
@@ -29,7 +29,7 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className={st.profile_desc}>
-                        <p>フロントエンドエンジニアおよびマークアップエンジニア志望。</p>
+                        <p>フロントエンドエンジニア志望。</p>
                         <p>
                             独学でWebサイト制作を勉強した後、基礎から学びなおすため、職業訓練に参加。
                             <br />

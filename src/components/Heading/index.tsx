@@ -12,10 +12,9 @@ type Prop = {
     enText: string;
     upperCase?: boolean;
     animType?: -1 | 0 | 1 | 2;
-    delay?: number;
 };
 
-const Heading = ({ jaText, enText, upperCase = true, animType = 0, delay = 0 }: Prop) => {
+const Heading = ({ jaText, enText, upperCase = true, animType = 0 }: Prop) => {
     // h2要素
     const h2Ref = useRef<HTMLHeadingElement>(null);
     // 文字の配列
@@ -35,7 +34,7 @@ const Heading = ({ jaText, enText, upperCase = true, animType = 0, delay = 0 }: 
                 charRef.current = split.chars as HTMLElement[];
 
                 if (animType === 0) {
-                    showUp(charRef.current, h2Ref.current, delay);
+                    showUp(charRef.current, h2Ref.current);
                 } else if (animType === 1) {
                     showRollUp(charRef.current, h2Ref.current);
                 } else if (animType === 2) {
