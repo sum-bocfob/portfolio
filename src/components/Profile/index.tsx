@@ -21,12 +21,12 @@ const Profile = () => {
                                 <time dateTime="1993-11-08">1993/11/08</time>
                             </p>
                         </div>
-                        <p className={st.myImage_p}>
+                        <div className={st.myImage_p}>
                             <div>
                                 <img className={st.myImage} src={myImg} alt="3DCGソフトBlenderで作成した私のアバター" width={420} height={300} />
                                 <img className={st.qualification} src={lv1Img} alt="HTML5プロフェッショナル認定試験ロゴ" />
                             </div>
-                        </p>
+                        </div>
                     </div>
                     <div className={st.profile_desc}>
                         <p>フロントエンドエンジニア志望。</p>

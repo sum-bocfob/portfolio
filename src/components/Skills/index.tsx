@@ -10,7 +10,7 @@ const Skills = () => {
     return (
         <Section id="skills" bgBlack={true}>
             <Container>
-                <Heading jaText="できること" enText="Skills" />
+                <Heading jaText="できること" enText="Skills" animType={1} />
                 <Grid colNum={2}>
                     {skills.map((skill) => (
                         <Skill key={skill.name} {...skill} />

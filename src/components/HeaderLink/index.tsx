@@ -1,11 +1,10 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useLocation, useNavigate } from "react-router-dom";
 import st from "./HeaderLink.module.scss";
 
-gsap.registerPlugin(SplitText, ScrollToPlugin);
+gsap.registerPlugin(SplitText);
 
 const HeaderLink = ({ name }: { name: string }) => {
     // a要素

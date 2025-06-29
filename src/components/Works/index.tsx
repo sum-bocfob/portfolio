@@ -10,7 +10,7 @@ const Works = () => {
     return (
         <Section id="works" bgBlack={false}>
             <Container>
-                <Heading jaText="制作物" enText="Works" />
+                <Heading jaText="制作物" enText="Works" animType={2} />
                 <Grid colNum={3}>
                     {works.map((work) => (
                         <Work key={work.name} {...work} />
